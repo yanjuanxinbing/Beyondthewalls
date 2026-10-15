@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="20" nextobjectid="190">
+ <tileset firstgid="1" name="new element" tilewidth="32" tileheight="32" tilecount="56" columns="8">
+  <image source="new_element.png" width="256" height="224"/>
+ </tileset>
+ <tileset firstgid="57" name="SpriteSheet" tilewidth="32" tileheight="32" spacing="2" tilecount="350" columns="25">
+  <image source="SpriteSheet.png" width="848" height="474"/>
+ </tileset>
+ <layer id="3" name="背景图层" width="30" height="20">
+  <data encoding="csv">
+10,11,38,30,30,30,30,38,23,38,38,38,23,38,38,30,38,38,30,38,38,38,30,23,38,30,38,38,18,19,
+18,19,1,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,28,31,31,
+31,31,23,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,2147483653,5,49,49,28,10,11,
+31,31,1,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,2147483661,13,49,49,28,18,19,
+11,31,1,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,38,30,25,30,38,30,30,28,31,10,
+19,31,23,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,28,31,18,
+31,31,1,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,23,31,31,
+31,31,1,24,3,49,49,49,49,49,3,3,49,49,49,49,49,3,24,49,49,49,49,49,3,3,49,1,11,31,
+31,31,23,3,3,49,49,49,49,49,3,24,49,49,49,49,49,3,3,49,49,49,49,49,3,24,49,23,19,31,
+10,11,1,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,1,10,11,
+18,19,28,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,29,18,19,
+31,31,1,49,49,49,49,49,49,49,49,20,20,49,49,49,49,49,49,49,49,49,49,49,49,49,49,23,10,11,
+31,31,28,49,49,49,49,49,49,49,20,49,49,49,20,49,49,49,49,49,49,49,49,49,49,49,49,1,18,10,
+10,11,23,49,49,49,49,49,20,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,23,31,18,
+18,19,1,49,20,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,1,31,31,
+31,31,1,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,23,31,31,
+31,5,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,1,31,31,
+31,13,49,49,49,33,16,16,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,33,49,49,49,28,31,31,
+51,51,38,38,30,25,30,0,25,0,25,0,30,30,30,25,0,0,30,25,0,0,30,0,0,30,30,0,52,51,
+51,51,51,52,52,51,52,52,51,52,51,51,51,52,51,51,51,51,51,52,52,52,51,51,52,51,52,51,52,51
+</data>
+ </layer>
+ <layer id="4" name="平台图层" width="30" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,38,25,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,38,25,25,0,30,25,38,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,47,48,0,0,0,0,0,0,0,0,0,0,0,0,38,38,30,30,38,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,38,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,30,25,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,25,38,38,38,38,25,30,0,0,0,0,0,
+0,0,0,0,0,0,38,30,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,45,46,0,0,30,0,0,0,38,0,0,0,0,38,34,34,0,0,0,
+0,0,0,0,0,38,0,38,0,38,0,38,38,0,38,0,38,38,38,38,38,38,0,38,38,38,38,38,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="9" name="床">
+  <object id="29" name="wall" class="wall" x="352" y="545" width="64" height="31"/>
+  <object id="162" class="bed" x="354" y="544" width="60"/>
+  <object id="186" name="wall" class="wall" x="192" y="328" width="63" height="24"/>
+  <object id="187" class="bed" x="194" y="327" width="60"/>
+ </objectgroup>
+ <objectgroup id="19" name="障碍层">
+  <object id="185" class="barrier" x="416" y="449" height="62"/>
+  <object id="188" class="barrier" x="256" y="329" height="22"/>
+  <object id="189" class="barrier" x="256" y="225" height="30"/>
+ </objectgroup>
+ <objectgroup id="2" name="地板层">
+  <object id="1" name="floor" class="wall" x="0" y="576" width="960" height="64"/>
+  <object id="2" name="墙2" class="wall" x="64" y="0" width="32" height="512"/>
+  <object id="3" name="墙3" class="wall" x="862" y="0" width="32" height="576"/>
+  <object id="4" name="墙4" class="wall" x="96" y="0" width="768" height="32"/>
+  <object id="5" name="墙5" class="wall" x="192" y="512" width="96" height="32"/>
+  <object id="7" name="墙7" class="wall" x="480" y="544" width="32" height="32"/>
+  <object id="8" name="墙8" class="wall" x="417" y="480" width="31" height="32"/>
+  <object id="9" name="墙9" class="wall" x="417" y="448" width="95" height="32"/>
+  <object id="11" name="墙11" class="wall" x="608" y="544" width="32" height="32"/>
+  <object id="12" name="墙12" class="wall" x="544" y="384" width="64" height="32"/>
+  <object id="13" name="墙13" class="wall" x="576" y="480" width="224" height="32"/>
+  <object id="14" name="墙14" class="wall" x="768" y="512" width="32" height="64"/>
+  <object id="16" name="墙16" class="wall" x="640" y="320" width="160" height="32"/>
+  <object id="17" name="墙17" class="wall" x="257" y="224" width="95" height="32"/>
+  <object id="18" name="墙18" class="wall" x="384" y="224" width="128" height="32"/>
+  <object id="19" name="墙19" class="wall" x="448" y="192" width="32" height="32"/>
+  <object id="20" name="墙20" class="wall" x="544" y="192" width="64" height="32"/>
+  <object id="21" name="墙21" class="wall" x="576" y="160" width="32" height="32"/>
+  <object id="22" name="墙22" class="wall" x="640" y="128" width="224" height="32"/>
+  <object id="161" name="air" class="wall" x="0" y="0" width="32" height="576"/>
+ </objectgroup>
+ <objectgroup id="7" name="箱子层" locked="1">
+  <object id="26" name="箱子1" class="box" gid="32" x="480" y="448" width="32" height="32"/>
+  <object id="27" name="箱子2" class="box" gid="32" x="544" y="384" width="32" height="32"/>
+  <object id="28" name="箱子3" class="box" gid="32" x="768" y="320" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup id="17" name="按钮层">
+  <object id="177" name="设置" class="set" x="6" y="6">
+   <point/>
+  </object>
+  <object id="181" name="重新开始" class="restart" x="902" y="6">
+   <properties>
+    <property name="level" value="level1.tmx"/>
+    <property name="nextLevel" value="level2.tmx"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="大门层" locked="1">
+  <object id="30" name="终点" class="end" x="736" y="64" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup id="11" name="宝箱层">
+  <object id="178" name="发卡" class="hairpin" gid="17" x="704" y="576" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup id="12" name="角色出生点" locked="1">
+  <object id="31" name="女孩" class="girlNoPin" x="64" y="558">
+   <point/>
+  </object>
+  <object id="32" name="猫" class="cat" x="96" y="558">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="13" name="移动平台层">
+  <object id="175" name="平台" class="pressPlatform" x="256" y="320">
+   <properties>
+    <property name="id" type="int" value="1"/>
+    <property name="len" type="int" value="2"/>
+    <property name="tx" type="int" value="320"/>
+    <property name="ty" type="int" value="384"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="压力板检测层" locked="1">
+  <object id="25" name="压力板检测范围" class="pressurePlate" x="801" y="571" width="62" height="6">
+   <properties>
+    <property name="id" type="int" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

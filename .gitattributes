@@ -1,0 +1,15 @@
+# 默认按文本处理，Git 依据 .gitattributes 归一化换行符。
+# 避免 Windows / Linux 协作时整个文件被标记为"已修改"。
+* text=auto
+
+*.java   text
+*.xml    text
+*.tmx    text
+*.txt    text
+*.md     text
+pom.xml  text
+
+# 二进制资源，禁止换行符转换与差异计算
+*.png    binary
+*.mp3    binary
+*.wav    binary

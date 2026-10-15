@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="23" nextobjectid="152">
+ <tileset firstgid="1" name="jump" tilewidth="32" tileheight="32" tilecount="8" columns="4">
+  <image source="jump.png" width="128" height="64"/>
+ </tileset>
+ <tileset firstgid="9" name="new_element" tilewidth="32" tileheight="32" tilecount="56" columns="8">
+  <image source="new_element.png" width="256" height="224"/>
+ </tileset>
+ <tileset firstgid="65" name="new_element2" tilewidth="32" tileheight="32" tilecount="4" columns="2">
+  <image source="new_element2.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="69" name="弹跳板" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <image source="bed.png" width="32" height="32"/>
+ </tileset>
+ <layer id="1" name="背景图层" width="30" height="20">
+  <data encoding="csv">
+27,39,39,39,26,27,39,39,39,39,18,19,39,39,26,27,39,39,39,18,19,39,39,18,19,39,39,39,18,19,
+39,39,18,19,39,39,39,39,39,39,26,27,39,39,39,39,39,39,39,26,27,39,39,26,27,39,39,39,26,27,
+39,39,26,27,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,18,
+39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,26,
+18,19,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,
+26,27,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,
+39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,18,
+19,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,18,19,26,
+27,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,26,27,39,
+39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,
+39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,
+39,39,18,19,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,18,19,
+39,39,26,27,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,26,27,
+39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,18,19,39,39,39,39,39,39,18,19,39,39,
+18,19,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,26,27,39,39,39,39,39,39,26,27,39,18,
+26,27,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,26,
+39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,18,19,39,39,39,39,39,
+39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,39,26,27,39,39,39,18,19,
+18,19,39,39,39,39,39,39,18,19,39,39,39,39,18,19,39,39,39,39,39,39,39,39,39,18,19,39,26,27,
+26,27,39,18,19,39,39,39,26,27,39,39,39,39,26,27,39,39,39,39,18,19,39,39,39,26,27,39,18,19
+</data>
+ </layer>
+ <layer id="3" name="建筑图层" width="30" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,0,
+0,38,57,57,57,57,28,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,46,0,
+0,38,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,22,57,57,57,57,57,2147483669,21,57,57,46,0,
+0,46,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,28,22,57,57,57,57,57,2147483669,21,57,57,46,0,
+0,38,28,57,57,57,57,57,57,57,28,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,46,0,
+0,46,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,28,57,57,57,28,22,57,57,57,57,46,0,
+0,46,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,28,28,57,57,57,57,57,28,57,46,0,
+0,38,57,57,57,57,28,57,57,57,57,57,28,57,57,57,57,22,57,57,57,57,57,57,57,28,57,57,46,0,
+0,46,57,57,57,57,57,57,57,57,57,57,57,57,28,57,57,57,57,57,57,57,57,57,57,57,57,57,46,0,
+0,46,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,46,0,
+0,38,57,57,57,57,57,28,22,57,57,57,57,57,57,57,57,57,57,57,28,57,57,57,57,57,22,57,46,0,
+0,46,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,28,57,57,46,0,
+0,46,57,28,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,46,0,
+0,46,57,57,57,57,57,57,57,57,22,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,28,46,0,
+0,38,57,57,57,22,57,57,57,57,57,57,57,28,57,28,57,57,57,28,57,57,57,28,57,57,57,28,46,0,
+0,46,57,57,57,28,57,22,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,28,57,57,46,0,
+0,46,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,28,57,57,57,57,22,57,57,57,57,57,46,0,
+0,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,0,46,46,0
+</data>
+ </layer>
+ <layer id="7" name="风层" width="30" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,66,0,0,0,0,0,66,0,0,0,0,0,0,0,0,0,0,0,0,1610612802,1610612802,1610612802,1610612802,1610612802,1610612802,1610612802,0,0,
+0,0,66,0,0,0,0,0,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,66,0,0,0,0,0,66,0,0,0,2684354626,2684354626,2684354626,2684354626,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,66,0,0,0,0,0,66,0,0,0,2684354626,2684354626,2684354626,2684354626,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,66,0,66,0,0,0,0,0,0,0,2684354626,2684354626,2684354626,2684354626,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,66,0,66,0,0,0,0,0,0,66,66,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,66,0,66,0,0,0,0,0,0,66,66,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,66,0,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="平台图层" width="30" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,42,0,2684354625,46,65,0,0,0,0,0,0,0,0,0,0,46,0,0,0,
+0,0,0,46,46,46,46,46,0,46,46,46,0,46,46,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,38,0,0,0,0,0,0,0,0,0,0,46,0,0,0,0,0,0,42,0,0,0,0,0,0,0,0,
+0,0,0,38,0,0,0,0,0,0,0,0,0,0,46,0,0,38,38,47,47,46,38,38,38,46,46,46,0,0,
+0,0,0,38,0,0,0,0,0,46,46,0,0,0,46,53,54,38,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,46,0,0,0,0,0,0,46,0,46,46,46,46,46,38,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,46,0,0,0,0,0,0,38,0,0,0,0,0,0,0,0,0,0,38,38,0,0,0,0,0,0,0,
+0,0,0,46,0,0,0,0,0,42,38,0,0,0,0,0,2684354625,46,46,0,0,65,38,0,0,0,0,0,0,0,
+0,0,0,46,0,0,46,46,38,46,38,0,0,0,0,0,0,46,0,0,0,0,46,0,0,46,38,38,0,0,
+0,0,0,0,0,0,0,0,0,0,46,0,0,0,46,46,46,46,0,0,0,0,46,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,46,2,2,2,46,0,42,0,0,0,0,0,46,42,0,0,0,2684354625,0,0,
+0,0,0,0,0,0,0,0,0,0,38,46,46,46,46,46,38,47,47,47,38,47,47,47,38,47,47,38,0,0,
+0,0,0,46,46,38,46,38,0,0,0,0,0,0,0,0,46,65,46,0,0,0,46,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,38,0,0,0,0,0,0,0,0,46,0,46,0,42,0,46,0,0,0,0,42,0,0,
+0,0,0,46,0,0,0,0,0,0,46,46,0,2147483669,21,0,46,0,46,0,46,0,38,0,38,0,0,46,0,0,
+0,0,2,46,0,0,46,0,46,0,0,0,0,2147483669,21,0,46,0,0,0,0,0,0,0,0,0,0,2684354625,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="17" name="弹跳层">
+  <object id="94" class="bed" x="480" y="224" width="64" height="10"/>
+ </objectgroup>
+ <objectgroup id="12" name="墙层">
+  <object id="24" name="1" class="wall" x="32" y="64" width="32" height="576"/>
+  <object id="25" name="2" class="wall" x="896" y="64" width="32" height="576"/>
+  <object id="26" name="3" class="wall" x="64" y="64" width="832" height="32"/>
+  <object id="27" name="4" class="wall" x="64" y="608" width="768" height="32"/>
+  <object id="28" name="5" class="wall" x="864" y="608" width="32" height="32"/>
+  <object id="29" name="6" class="wall" x="832" y="96" width="32" height="32"/>
+  <object id="30" name="7" class="wall" x="544" y="192" width="352" height="31"/>
+  <object id="31" name="8" class="wall" x="800" y="352" width="96" height="32"/>
+  <object id="32" name="9" class="wall" x="320" y="448" width="576" height="32"/>
+  <object id="33" name="10" class="wall" x="320" y="256" width="32" height="192"/>
+  <object id="34" name="11" class="wall" x="192" y="352" width="128" height="32"/>
+  <object id="35" name="12" class="wall" x="320" y="544" width="64" height="32"/>
+  <object id="36" name="13" class="wall" x="96" y="128" width="160" height="32"/>
+  <object id="37" name="14" class="wall" x="96" y="160" width="31" height="224"/>
+  <object id="38" name="15" class="wall" x="96" y="480" width="159" height="32"/>
+  <object id="39" name="16" class="wall" x="96" y="544" width="32" height="64"/>
+  <object id="40" name="17" class="wall" x="192" y="576" width="32" height="32"/>
+  <object id="41" name="18" class="wall" x="224" y="512" width="31" height="32"/>
+  <object id="42" name="19" class="wall" x="256" y="576" width="32" height="32"/>
+  <object id="43" name="20" class="wall" x="512" y="480" width="32" height="128"/>
+  <object id="44" name="21" class="wall" x="672" y="288.667" width="64" height="32"/>
+  <object id="45" name="22" class="wall" x="704" y="320" width="32" height="128"/>
+  <object id="46" name="23" class="wall" x="704" y="480" width="32" height="96"/>
+  <object id="47" name="24" class="wall" x="864" y="544" width="32" height="32"/>
+  <object id="49" name="26" class="wall" x="576" y="480" width="32" height="96"/>
+  <object id="50" name="27" class="wall" x="640" y="544" width="32" height="32"/>
+  <object id="51" name="28" class="wall" x="768" y="544" width="32" height="32"/>
+  <object id="52" name="29" class="wall" x="289" y="224" width="63" height="32"/>
+  <object id="53" name="30" class="wall" x="288" y="129" width="96" height="31"/>
+  <object id="54" name="31" class="wall" x="448" y="96" width="31" height="160"/>
+  <object id="55" name="32" class="wall" x="384" y="256" width="160" height="32"/>
+  <object id="56" name="33" class="wall" x="544" y="224" width="32" height="64"/>
+  <object id="58" name="35" class="wall" x="544" y="320" width="32" height="96"/>
+  <object id="59" name="36" class="wall" x="448" y="384" width="96" height="32"/>
+  <object id="60" name="37" class="wall" x="448" y="416" width="32" height="32"/>
+  <object id="62" name="39" class="wall" x="416" y="127" width="32" height="33"/>
+  <object id="142" class="wall" x="576" y="320" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup id="11" name="宝箱">
+  <object id="12" name="宝箱1" class="treasure" gid="52" x="864" y="128" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup id="10" name="箱子层">
+  <object id="6" name="箱子5" class="box" gid="40" x="224" y="352" width="32" height="32"/>
+  <object id="8" name="箱子4" class="box" gid="40" x="161" y="129" width="30" height="30"/>
+  <object id="14" name="箱子3" class="box" gid="40" x="800" y="448" width="32" height="32"/>
+  <object id="16" name="箱子2" class="box" gid="40" x="576" y="608" width="32" height="32"/>
+  <object id="17" name="箱子1" class="box" gid="40" x="673" y="289" width="30" height="30"/>
+ </objectgroup>
+ <objectgroup id="5" name="锁层">
+  <object id="1" name="锁" class="lock" gid="34" x="96" y="544" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup id="18" name="压力板判定层">
+  <object id="97" name="压力板2控制移动平台1" class="pressurePlate" x="288" y="346" width="32" height="6">
+   <properties>
+    <property name="id" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="98" name="压力板3控制移动平台9" class="pressurePlate" x="352" y="122" width="32" height="6.66667">
+   <properties>
+    <property name="id" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="100" name="压力板4控制移动平台3" class="pressurePlate" x="736.667" y="442" width="32" height="6">
+   <properties>
+    <property name="id" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="101" name="压力板5控制移动平台4" class="pressurePlate" x="640" y="540" width="32" height="6">
+   <properties>
+    <property name="id" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="102" name="压力板6控制移动平台5" class="pressurePlate" x="864" y="540" width="32" height="6">
+   <properties>
+    <property name="id" type="int" value="6"/>
+   </properties>
+  </object>
+  <object id="103" name="压力板7控制移动平台6" class="pressurePlate" x="512" y="442" width="32" height="6">
+   <properties>
+    <property name="id" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="104" name="压力板8控制移动平台7,8" class="pressurePlate" x="672" y="187" width="32" height="6">
+   <properties>
+    <property name="id" type="int" value="8"/>
+   </properties>
+  </object>
+  <object id="129" name="9" class="pressurePlate" x="672" y="187" width="32" height="6">
+   <properties>
+    <property name="id" type="int" value="9"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="移动平台层">
+  <object id="118" class="pressPlatform" x="352" y="160">
+   <properties>
+    <property name="id" type="int" value="3"/>
+    <property name="len" type="int" value="1"/>
+    <property name="tx" type="int" value="384"/>
+    <property name="ty" type="int" value="160"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="119" class="pressPlatform" x="832" y="608">
+   <properties>
+    <property name="id" type="int" value="7"/>
+    <property name="len" type="int" value="1"/>
+    <property name="tx" type="int" value="832"/>
+    <property name="ty" type="int" value="512"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="120" class="pressPlatform" x="576" y="128">
+   <properties>
+    <property name="id" type="int" value="8"/>
+    <property name="len" type="int" value="5"/>
+    <property name="tx" type="int" value="832"/>
+    <property name="ty" type="int" value="128"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="121" class="pressPlatform" x="544" y="288">
+   <properties>
+    <property name="id" type="int" value="6"/>
+    <property name="len" type="int" value="1"/>
+    <property name="tx" type="int" value="577"/>
+    <property name="ty" type="int" value="288"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="122" class="pressPlatform" x="800" y="288">
+   <properties>
+    <property name="id" type="int" value="5"/>
+    <property name="len" type="int" value="1"/>
+    <property name="tx" type="int" value="864"/>
+    <property name="ty" type="int" value="288"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="123" class="pressPlatform" x="544" y="576">
+   <properties>
+    <property name="id" type="int" value="4"/>
+    <property name="len" type="int" value="1"/>
+    <property name="tx" type="int" value="800"/>
+    <property name="ty" type="int" value="576"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="125" class="pressPlatform" x="256" y="96">
+   <properties>
+    <property name="id" type="int" value="2"/>
+    <property name="len" type="int" value="1"/>
+    <property name="tx" type="int" value="256"/>
+    <property name="ty" type="int" value="129"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="130" class="pressPlatform" x="864" y="128">
+   <properties>
+    <property name="id" type="int" value="9"/>
+    <property name="len" type="int" value="1"/>
+    <property name="tx" type="int" value="864"/>
+    <property name="ty" type="int" value="160"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="19" name="指示层">
+  <object id="113" name="女孩出生点" class="girlWithPin" x="448" y="578">
+   <point/>
+  </object>
+  <object id="114" name="猫出生点" class="cat" x="416" y="578">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="20" name="终点层">
+  <object id="115" name="终点" class="end" x="768" y="128" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup id="14" name="传送水管层">
+  <object id="82" name="水管1" class="water" x="512" y="324" width="30" height="24">
+   <properties>
+    <property name="tx" type="int" value="863"/>
+    <property name="ty" type="int" value="416"/>
+   </properties>
+  </object>
+  <object id="83" name="水管2" class="water" x="416" y="100" width="32" height="24">
+   <properties>
+    <property name="tx" type="int" value="560"/>
+    <property name="ty" type="int" value="510"/>
+   </properties>
+  </object>
+  <object id="85" name="水管3" class="water" x="676" y="322" width="24" height="30">
+   <properties>
+    <property name="tx" type="int" value="532"/>
+    <property name="ty" type="int" value="126"/>
+   </properties>
+  </object>
+  <object id="86" name="水管4" class="water" x="864" y="580" width="30" height="24">
+   <properties>
+    <property name="tx" type="int" value="495"/>
+    <property name="ty" type="int" value="126"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="13" name="风场层">
+  <object id="74" name="风场1向上" class="air" x="64" y="128" width="32" height="468">
+   <properties>
+    <property name="direction" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="78" name="风场5向上" class="air" x="352" y="384" width="96" height="52">
+   <properties>
+    <property name="direction" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="79" name="风场6向左" class="air" x="672" y="224" width="224" height="32">
+   <properties>
+    <property name="direction" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="127" class="air" x="384" y="288" width="128" height="96">
+   <properties>
+    <property name="direction" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="139" class="air" x="128" y="352" width="32" height="128">
+   <properties>
+    <property name="direction" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="141" class="air" x="256" y="224" width="32" height="128">
+   <properties>
+    <property name="direction" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="144" class="air" x="672" y="224" width="224" height="32">
+   <properties>
+    <property name="direction" type="int" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="22" name="障碍层">
+  <object id="145" class="barrier" x="672" y="224" width="224"/>
+  <object id="146" class="barrier" x="480" y="96" height="128"/>
+  <object id="148" class="barrier" x="288" y="226" height="30"/>
+  <object id="149" class="barrier" x="128" y="352" height="32"/>
+  <object id="150" class="barrier" x="256" y="481" height="61"/>
+ </objectgroup>
+ <objectgroup id="21" name="按钮层">
+  <object id="116" class="set" x="6" y="6">
+   <point/>
+  </object>
+  <object id="117" class="restart" x="902" y="6">
+   <properties>
+    <property name="level" value="level4.tmx"/>
+    <property name="nextLevel" value="level5.tmx"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="可拾取物层">
+  <object id="2" name="钥匙" class="key" gid="43" x="288" y="416" width="32" height="32"/>
+ </objectgroup>
+</map>
